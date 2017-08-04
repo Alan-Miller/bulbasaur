@@ -1,0 +1,58 @@
+.wordnik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.word-form {
+    margin: 20px;
+}
+
+.word-input {
+    padding: 14px;
+    outline: none;
+    color: seagreen;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.entries {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entries li {
+    font-size: 1.3rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.entries li p {
+    margin: 0;
+    padding: 0;
+}
+
+.entries li p:first-child {
+    font-size: 1.9rem;
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(10, 10, 10, .45);
+}
+
+.entries li p:last-child {
+    margin-top: 7px;
+    font-size: 1rem;
+    color: rgba(10, 10, 10, .5);
+}
+
+h2 {
+    font-size: 2.2rem;
+}
