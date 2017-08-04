@@ -10,7 +10,7 @@
 .evolveBtn {
   width: 100px;
   height: 40px;
-  background-color: coral;
+  background-color: RGBA(206, 20, 35, 1.00);
   border-radius: 5px;
   color: white;
   display: flex;
@@ -36,8 +36,6 @@
   0% { box-shadow: 0px 0px 20px 20px whitesmoke; }
   100% { box-shadow: 0px 0px 44px 44px whitesmoke; }
 } 
-
-
 
 .pokeImg {
   position: absolute;
