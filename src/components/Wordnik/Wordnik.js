@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Wordnik.css';
+import { apiKey } from '../../config';
 
 class Wordnik extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class Wordnik extends Component {
     define(event) {
         event.preventDefault();
 
-        axios.get('http://api.wordnik.com:80/v4/word.json/'+this.state.word+'/definitions?&includeRelated=true&useCanonical=true&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5')
+        axios.get(`http://api.wordnik.com:80/v4/word.json/${this.state.word}/definitions?&includeRelated=true&useCanonical=true&includeTags=false&api_key=${apiKey}`)
         .then((response) => (
             // console.log(response.data)
             this.setState({definitions: response.data})

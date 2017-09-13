@@ -28,6 +28,7 @@ class Arena extends Component {
   }
 
   componentWillMount() {
+    console.log('mounted')
     getFirstPokemon()
     .then((bulbaData) => {
       var pokeName = bulbaData.name
