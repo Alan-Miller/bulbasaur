@@ -7,7 +7,7 @@ class Arena extends Component {
 
   constructor() {
     super()
-    this.state = {}
+    this.state = {};
     this.evolve = this.evolve.bind(this);
   }
 
@@ -28,7 +28,8 @@ class Arena extends Component {
   }
 
   componentWillMount() {
-    console.log('mounted')
+    // console.log('mounted');
+    console.log('componentWillMount is first');
     getFirstPokemon()
     .then((bulbaData) => {
       var pokeName = bulbaData.name
@@ -37,10 +38,23 @@ class Arena extends Component {
     .catch(error => console.log(error.message))
   }
 
+  componentDidMount() {
+    console.log('componentDidMount is second');
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnMount is last');
+  }
+
+  shouldComponentUpdate(props, state) {
+    console.log('shouldComponentUpdate is now');
+    return true;
+  }
+
   render() {
 
     const poke = !this.state.pokemon ? <h2 style={ {color: "white"} }>Gotta catch 'em all...</h2> : (
-      <PokeForm evolve={this.evolve} name={this.state.pokemon.name} sprite={this.state.pokemon.sprites.front_default} />
+      <PokeForm test="testProp" evolve={this.evolve} name={this.state.pokemon.name} sprite={this.state.pokemon.sprites.back_default} />
     )
     return (
       <div className="Arena">
